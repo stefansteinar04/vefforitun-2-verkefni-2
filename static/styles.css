@@ -1,1 +1,130 @@
-/* todo stílar, notið úr v8 í vef1-2025! */
+:root {
+    color-scheme: light dark;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.4;
+  }
+  
+  .container {
+    max-width: 720px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  
+  .card {
+    background: rgba(127, 127, 127, 0.08);
+    border: 1px solid rgba(127, 127, 127, 0.25);
+    border-radius: 12px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  h1 {
+    margin: 0 0 1rem 0;
+    font-size: 1.5rem;
+  }
+  
+  .row {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  
+  .row.end {
+    justify-content: flex-end;
+  }
+  
+  input[type='text'] {
+    flex: 1;
+    padding: 0.6rem 0.7rem;
+    border-radius: 10px;
+    border: 1px solid rgba(127, 127, 127, 0.35);
+    background: transparent;
+  }
+  
+  button {
+    padding: 0.6rem 0.8rem;
+    border-radius: 10px;
+    border: 1px solid rgba(127, 127, 127, 0.35);
+    background: rgba(127, 127, 127, 0.15);
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background: rgba(127, 127, 127, 0.25);
+  }
+  
+  button.danger {
+    border-color: rgba(220, 20, 60, 0.6);
+  }
+  
+  .todos {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 0.5rem;
+  }
+  
+  .todo {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    padding: 0.6rem;
+    border-radius: 12px;
+    border: 1px solid rgba(127, 127, 127, 0.25);
+    background: rgba(127, 127, 127, 0.06);
+  }
+  
+  .todo-main {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    flex: 1;
+  }
+  
+  .todo-main input[type='text'] {
+    flex: 1;
+  }
+  
+  .todo-delete {
+    margin: 0;
+  }
+  
+  .todo.finished input[type='text'] {
+    text-decoration: line-through;
+    opacity: 0.75;
+  }
+  
+  .error {
+    padding: 0.6rem 0.7rem;
+    border-radius: 12px;
+    border: 1px solid rgba(220, 20, 60, 0.5);
+    background: rgba(220, 20, 60, 0.12);
+    margin: 0 0 1rem 0;
+  }
+  
+  .muted {
+    opacity: 0.75;
+    margin: 0;
+  }
+  
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+  

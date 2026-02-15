@@ -14,7 +14,7 @@ jobs:
 
       - uses: actions/setup-node@v3
         with:
-          node-version: 22
+          node-version: 24
 
       - name: Install dependencies
         run: npm install
@@ -23,6 +23,5 @@ jobs:
         run: npm run lint
 
       - name: Test
-        # Run this even if linting failed
         if: always()
         run: npm test

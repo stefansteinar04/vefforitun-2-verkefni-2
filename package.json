@@ -1,14 +1,18 @@
 {
   "name": "vef2-2026-v2",
+  "version": "1.0.0",
+  "private": true,
   "type": "module",
+  "engines": {
+    "node": "24"
+  },
   "scripts": {
     "dev": "tsx watch --env-file=.env src/index.ts",
     "build": "tsc",
-    "start": "node --env-file=.env dist/index.js",
-    "lint": "eslint",
-    "test": "node --import tsx --test --experimental-test-module-mocks 'src/**/*.test.ts'",
-    "test:watch": "node --import tsx --test --watch --experimental-test-module-mocks 'src/**/*.test.ts'",
-    "test:coverage": "node --import tsx --test --experimental-test-coverage --experimental-test-module-mocks 'src/**/*.test.ts'"
+    "start": "node dist/index.js",
+    "lint": "eslint .",
+    "test": "node --import tsx --test \"src/**/*.test.ts\"",
+    "test:watch": "node --import tsx --test --watch \"src/**/*.test.ts\""
   },
   "dependencies": {
     "@hono/node-server": "^1.19.9",
@@ -17,9 +21,12 @@
     "zod": "^4.3.5"
   },
   "devDependencies": {
-    "@types/node": "^20.11.17",
+    "@eslint/js": "^9.39.2",
+    "@types/node": "^24.0.0",
     "@types/pg": "^8.16.0",
-    "tsx": "^4.7.1",
-    "typescript": "^5.8.3"
+    "eslint": "^9.39.2",
+    "tsx": "^4.20.5",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.55.0"
   }
 }
